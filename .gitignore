@@ -1,0 +1,5 @@
+# Ignore all files and subdirectories inside the "data" folder
+data/*
+
+# But, don't ignore the specific .keep file inside the "data" folder
+!*/.keep
