@@ -5,6 +5,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import pickle
 
 # Load the data from the file
 file_path = 'C:/Users/shawn/Documents/SCSU/SE512/Project/archive/fraudData.csv' 
@@ -110,6 +111,10 @@ print(conf_matrix_val_svm)
 print("Classification Report:")
 print(class_report_val_svm)
 
+
+pickle.dump(nb_model, open('nbmodel.pkl', 'wb'))
+pickle.dump(svm_model, open('svcmodel.pkl', 'wb'))
+pickle.dump(dt_model, open('dtmodel.pkl', 'wb'))
 
 
 # Test the models on the test set
