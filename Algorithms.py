@@ -5,7 +5,6 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-import pickle
 
 # Load the data from the file
 file_path = './online-payments-fraud-detection-dataset.csv' 
