@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import pickle
 
 # Load the data from the file
-file_path = 'C:/Users/shawn/Documents/SCSU/SE512/Project/archive/fraudData.csv' 
+file_path = './online-payments-fraud-detection-dataset.csv' 
 data = pd.read_csv(file_path)
 
 # Separate features and target variable
@@ -110,11 +110,6 @@ print("Confusion Matrix:")
 print(conf_matrix_val_svm)
 print("Classification Report:")
 print(class_report_val_svm)
-
-
-pickle.dump(nb_model, open('nbmodel.pkl', 'wb'))
-pickle.dump(svm_model, open('svcmodel.pkl', 'wb'))
-pickle.dump(dt_model, open('dtmodel.pkl', 'wb'))
 
 
 # Test the models on the test set
